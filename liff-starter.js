@@ -1,4 +1,3 @@
-const fs = require('fs'); 
 
 window.onload = function (e) {
     liff.init(function (data) { 
