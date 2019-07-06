@@ -9,7 +9,7 @@ fs.writeFile('Output.txt', data1, (err) => {
     if (err) throw err; 
 })
         
-fs.writeFile('Output.txt', data, (err) => { 
+fs.writeFile('log.txt', data, (err) => { 
       
     // In case of a error throw err. 
     if (err) throw err; 
