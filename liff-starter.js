@@ -1,20 +1,7 @@
 
 window.onload = function (e) {
-    liff.init(function (data) { 
-let data1 = "Learning how to write in a file."
-   
-fs.writeFile('Output.txt', data1, (err) => { 
-      
-    // In case of a error throw err. 
-    if (err) throw err; 
-})
-        
-fs.writeFile('log.txt', data, (err) => { 
-      
-    // In case of a error throw err. 
-    if (err) throw err; 
-})
-        console.log(data);
+    liff.init(function (data) {
+        alert(data);
         initializeApp(data);
     });
 };
