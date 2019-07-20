@@ -45,6 +45,7 @@ function initializeApp(data) {
     // get access token
     document.getElementById('getaccesstoken').addEventListener('click', function () {
         const accessToken = liff.getAccessToken();
+        alert(JSON.stringify(accessToken));
         document.getElementById('accesstokenfield').textContent = accessToken;
         toggleAccessToken();
     });
@@ -52,6 +53,7 @@ function initializeApp(data) {
     // get profile call
     document.getElementById('getprofilebutton').addEventListener('click', function () {
         liff.getProfile().then(function (profile) {
+            alert(JSON.stringify(profile));
             document.getElementById('useridprofilefield').textContent = profile.userId;
             document.getElementById('displaynamefield').textContent = profile.displayName;
 
@@ -65,6 +67,7 @@ function initializeApp(data) {
             profilePictureDiv.appendChild(img);
 
             document.getElementById('statusmessagefield').textContent = profile.statusMessage;
+   
             toggleProfileData();
         }).catch(function (error) {
             window.alert("Error getting profile: " + error);
