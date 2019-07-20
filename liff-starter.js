@@ -1,7 +1,7 @@
 
 window.onload = function (e) {
     liff.init(function (data) {
-        alert(data);
+        alert(JSON.stringify(data));
         initializeApp(data);
     });
 };
